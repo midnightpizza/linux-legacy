@@ -21,7 +21,6 @@ fw-external-y := $(subst ",,$(CONFIG_EXTRA_FIRMWARE))
 # But be aware that the config file might not be included at all.
 
 fw-shipped-$(CONFIG_RT2870) += rt3070.bin rt2870.bin
-fw-shipped-$(CONFIG_FB_MXC_EINK_PANEL) += imx/epdc.fw
 
 fw-shipped-all := $(fw-shipped-y) $(fw-shipped-m) $(fw-shipped-)
 
