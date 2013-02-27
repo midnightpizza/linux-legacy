@@ -340,6 +340,7 @@ out:
 int devtmpfs_mount(const char *mntdir)
 {
 	int err;
+        int mflags = MS_SILENT;
 
 	if (!dev_mount)
 		return 0;
@@ -347,7 +348,10 @@ int devtmpfs_mount(const char *mntdir)
 	if (!dev_mnt)
 		return 0;
 
-	err = sys_mount("devtmpfs", (char *)mntdir, "devtmpfs", MS_SILENT, NULL);
+#ifdef CONFIG_DEFTMPFS_SAFE
+        mflags |= MS_NOEXEC | MS_NOSUID;
+#endif
+	err = sys_mount("devtmpfs", (char *)mntdir, "devtmpfs", mflags, NULL);
 	if (err)
 		printk(KERN_INFO "devtmpfs: error mounting %i\n", err);
 	else
