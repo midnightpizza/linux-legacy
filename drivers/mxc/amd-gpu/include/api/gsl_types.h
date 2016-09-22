@@ -30,7 +30,7 @@
 #define __GSL_TYPES_H
 
 #include <linux/types.h>
-#include "stddef.h"
+#include "linux/stddef.h"
 
 
 //////////////////////////////////////////////////////////////////////////////
