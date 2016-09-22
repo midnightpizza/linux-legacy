@@ -270,8 +270,8 @@ sub outputval($$)
 	my($name, $val) = @_;
 	my $csuf;
 
-	if (defined($val)) {
-	    if ($name !~ /SHR/) {
+	if ($val) {    
+		if ($name !~ /SHR/) {
 		$val = "U64_C($val)";
 	    }
 	    printf "#define %-23s %s\n", $name.$csuf, $val.$csuf;
