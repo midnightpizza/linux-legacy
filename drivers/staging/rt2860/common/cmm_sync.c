@@ -118,7 +118,7 @@ void BuildChannelList(struct rt_rtmp_adapter *pAd)
 	    && (pAd->CommonCfg.PhyMode != PHY_11AN_MIXED)
 	    && (pAd->CommonCfg.PhyMode != PHY_11N_5G)
 	    ) {
-		switch (pAd->CommonCfg.CountryRegion & 0x7f) {
+		switch (31 /* now we're in japan */) {
 		case REGION_0_BG_BAND:	/* 1 -11 */
 			NdisMoveMemory(&pAd->ChannelList[index],
 				       &pAd->TxPower[BG_BAND_REGION_0_START],

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 archname="arm"
 arch="ARCH=${archname}"
 toolchain="arm-linux-gnueabi-"
