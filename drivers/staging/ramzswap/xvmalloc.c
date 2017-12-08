@@ -273,11 +273,7 @@ static void remove_block(struct xv_pool *pool, struct page *page, u32 offset,
 }
 
 /*
-<<<<<<< HEAD
- * Allocate a page and add it to freelist of given pool.
-=======
  * Allocate a page and add it freelist of given pool.
->>>>>>> 644bf7b... Staging: xvmalloc memory allocator
  */
 static int grow_pool(struct xv_pool *pool, gfp_t flags)
 {
