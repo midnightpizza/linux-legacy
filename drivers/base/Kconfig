@@ -33,6 +33,15 @@ config DEVTMPFS_MOUNT
 	  filesystem. It will not affect initramfs based mounting.
 	  If unsure, say N here.
 
+config DEVTMPFS_SAFE
+	bool "Automount devtmpfs with nosuid/noexec"
+	depends on DEVTMPFS_MOUNT
+	default y
+	help
+	  This instructs the kernel to automount devtmpfs with the
+	  MS_NOEXEC and MS_NOSUID mount flags, which can prevent
+	  certain kinds of code-execution attack on embedded platforms.
+
 config STANDALONE
 	bool "Select only drivers that don't need compile-time external firmware" if EXPERIMENTAL
 	default y

@@ -6,6 +6,7 @@ obj-$(CONFIG_KEYS)			+= keys/
 subdir-$(CONFIG_SECURITY_SELINUX)	+= selinux
 subdir-$(CONFIG_SECURITY_SMACK)		+= smack
 subdir-$(CONFIG_SECURITY_TOMOYO)        += tomoyo
+subdir-$(CONFIG_SECURITY_CHROMIUMOS)	+= chromiumos
 
 # always enable default capabilities
 obj-y		+= commoncap.o min_addr.o
@@ -21,6 +22,7 @@ obj-$(CONFIG_SECURITY_SMACK)		+= lsm_audit.o
 endif
 obj-$(CONFIG_SECURITY_TOMOYO)		+= tomoyo/built-in.o
 obj-$(CONFIG_SECURITY_ROOTPLUG)		+= root_plug.o
+obj-$(CONFIG_SECURITY_CHROMIUMOS)	+= chromiumos/built-in.o
 obj-$(CONFIG_CGROUP_DEVICE)		+= device_cgroup.o
 
 # Object integrity file lists
