@@ -38,14 +38,8 @@
 
 #define GSL_HAL_SIZE_REG_G12            SZ_4K            /* 4KB */
 
-<<<<<<< HEAD
 #define GSL_HAL_SHMEM_SIZE_EMEM_MMU		SZ_128M
-#define GSL_HAL_SHMEM_SIZE_EMEM_NOMMU_EMEM	SZ_64M + SZ_16M
-#define GSL_HAL_SHMEM_SIZE_EMEM_NOMMU_PHYS	SZ_16M
-=======
-#define GSL_HAL_SHMEM_SIZE_EMEM_MMU	SZ_128M
 #define GSL_HAL_SHMEM_SIZE_EMEM_NOMMU	SZ_32M
->>>>>>> 5d9a51d8f027f39593959170ef3504f12d58aeb4
 
 /* physical memory area is reserved size minus emem area if no mmu */
 

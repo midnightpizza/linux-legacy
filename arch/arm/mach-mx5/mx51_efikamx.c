@@ -289,15 +289,9 @@ static void __init mx51_efikamx_fixup(struct machine_desc *desc, struct tag *tag
 {
 	struct tag *mem_tag = 0;
 	int total_mem = SZ_512M;
-<<<<<<< HEAD
 	int fb_mem = SZ_16M;
-	int gpu_mem = SZ_32M + SZ_16M;
 	int vpu_mem = SZ_32M;
-=======
-	int fb_mem = SZ_8M;
 	int gpu_mem = SZ_32M + SZ_32M;
->>>>>>> 5d9a51d8f027f39593959170ef3504f12d58aeb4
-	int sys_mem;
 
 	mxc_set_cpu_type(MXC_CPU_MX51);
 
