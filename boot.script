@@ -1,4 +1,4 @@
-setenv ramdisk uInitrd;
+etenv ramdisk uInitrd;
 setenv kernel uImage;
 setenv bootargs console=tty1 console=/dev/${console} root=/dev/mmcblk0p2 rootwait rw quiet rootfstype=ext4;
 ${loadcmd} ${ramdiskaddr} ${ramdisk};
